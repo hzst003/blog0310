@@ -1,0 +1,43 @@
+---
+title: "让代码高亮更好看：rehype-highlight + highlight.js"
+date: "2026-03-06"
+description: "使用 rehype-highlight 和 highlight.js，让 MDX 里的代码块自动高亮。"
+tags:
+  - 代码高亮
+  - MDX
+  - 前端
+---
+
+# 让代码高亮更好看：rehype-highlight + highlight.js
+
+在这个项目里，代码高亮是这样接上的：
+
+1. 使用 `rehype-highlight` 作为 MDX 的 rehype 插件
+2. 在 `globals.css` 里引入 `highlight.js` 的主题
+
+## 配置片段（已在项目中）
+
+```tsx
+import remarkGfm from "remark-gfm"
+import rehypeHighlight from "rehype-highlight"
+
+const { content } = await compileMDX({
+  source: post.content,
+  options: {
+    parseFrontmatter: false,
+    mdxOptions: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [rehypeHighlight],
+    },
+  },
+})
+```
+
+## 代码块示例
+
+```bash
+npm install remark-gfm rehype-highlight highlight.js
+```
+
+你也可以更换 highlight.js 的主题，只需在 `globals.css` 里改掉 `@import "highlight.js/styles/xxx.css"` 即可。
+
