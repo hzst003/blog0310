@@ -76,6 +76,40 @@ function FeatureCard({
 
 const featureCards: FeatureCardProps[] = [
   {
+    href: "http://124.220.27.60:8502/",
+    ariaLabel: "查看代码高亮相关文章",
+    icon: (
+      <Image
+        src="/icons/xlsxreport_82918.png"
+        alt="xlsx"
+        width={30}
+        height={30}
+        className="h-[30px] w-[30px]"
+      />
+    ),
+    title: "报表浏览",
+    description: "xlsx报表浏览",
+    footerLeft: "xlsx",
+    footerRight: "查看",
+  },
+  {
+    href: "http://124.220.27.60:8503/",
+    ariaLabel: "xlsx",
+    icon: (
+      <Image
+        src="/icons/xlsx57489.png"
+        alt="主题切换"
+        width={30}
+        height={30}
+        className="h-[30px] w-[30px]"
+      />
+    ),
+    title: "xlsx工具箱",
+    description: "xlsx拆分、合并、分组、匹配",
+    footerLeft: "xlsx",
+    footerRight: "查看",
+  },
+  {
     href: "/blog",
     ariaLabel: "查看所有博客文章",
     icon: <BookOpen className="h-4 w-4" aria-hidden="true" />,
@@ -84,27 +118,7 @@ const featureCards: FeatureCardProps[] = [
     footerLeft: "Route: /blog",
     footerRight: "进入博客",
   },
-  {
-    href: "/blog/mdx-writing",
-    ariaLabel: "查看 MDX 写作技巧",
-    icon: <FilePlus2 className="h-4 w-4" aria-hidden="true" />,
-    title: "写一篇新文章",
-    description: (
-      <>
-        在 <code>content/posts</code> 中新增一个 <code>.mdx</code> 文件即可。
-      </>
-    ),
-    content: (
-      <>
-        <p>例如：</p>
-        <pre className="mt-2 rounded-md bg-muted px-3 py-2">
-          <code>my-new-post.mdx</code>
-        </pre>
-      </>
-    ),
-    footerLeft: "本地文件系统直接编辑",
-    footerRight: "查看写作技巧",
-  },
+
   {
     href: "https://edgeone.hzst.online/",
     ariaLabel: " wasu",
@@ -141,56 +155,13 @@ const featureCards: FeatureCardProps[] = [
     footerLeft: " ",
     footerRight: "进入 ",
   },
-  {
-    href: "http://124.220.27.60:8502/",
-    ariaLabel: "查看代码高亮相关文章",
-    icon: (
-      <Image
-        src="/icons/xlsxreport_82918.png"
-        alt="xlsx"
-        width={30}
-        height={30}
-        className="h-[30px] w-[30px]"
-      />
-    ),
-    title: "报表浏览",
-    description: "xlsx报表浏览",
-    footerLeft: "xlsx",
-    footerRight: "查看",
-  },
-  {
-    href: "http://124.220.27.60:8503/",
-    ariaLabel: "xlsx",
-    icon: (
-      <Image
-        src="/icons/xlsx57489.png"
-        alt="主题切换"
-        width={30}
-        height={30}
-        className="h-[30px] w-[30px]"
-      />
-    ),
-    title: "xlsx工具箱",
-    description: "xlsx拆分、合并、分组、匹配",
-    footerLeft: "xlsx",
-    footerRight: "查看",
-  },
+
 ]
 
 export default function Home() {
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-8 px-4 py-6 sm:px-6 sm:py-8">
-      <header className="space-y-2 border-b border-border/60 pb-4">
-        <p className="text-sm font-medium text-primary">欢迎来到我的博客</p>
-        <h1 className="text-3xl font-semibold tracking-tight">
-          Next.js + MDX 的极简技术博客
-        </h1>
-        <p className="max-w-2xl text-sm text-muted-foreground">
-          所有文章使用 MDX 编写，配合 Tailwind CSS、shadcn/ui 和 Shiki
-          代码高亮。你可以快速浏览文章、按标签筛选，也可以直接在{" "}
-          <code>content/posts</code> 里写自己的内容。
-        </p>
-      </header>
+      <header className="space-y-2 border-b border-border/60 pb-4" />
 
       <section className="grid gap-y-4 gap-x-3 md:grid-cols-2">
         {featureCards.map((card) => (
@@ -201,10 +172,12 @@ export default function Home() {
       <footer className="border-t border-border/60 pt-4 text-[11px] text-muted-foreground sm:pt-6">
         <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
           <div className="space-y-1">
-            <p>
-              © {new Date().getFullYear()} Xu   </p>
+            <p>© 2025 Xu.（AI 建站）保留所有权利.</p>
             <p className="text-[10px] text-muted-foreground/80">
-              备案号：浙ICP备 00000000 号-1
+              浙ICP备2025157769号
+            </p>
+            <p className="text-[10px] text-muted-foreground/80">
+              浙公网安备33010502012241号
             </p>
           </div>
           <div className="inline-flex items-center gap-1">

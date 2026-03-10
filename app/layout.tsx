@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "XuXu",
   description: "Next.js + MDX 博客示例",
 }
 
@@ -63,7 +63,7 @@ export default function RootLayout({
                       href="/contact"
                       className="hover:text-foreground hover:underline underline-offset-4"
                     >
-                      联系我
+                      联系
                     </Link>
                   </nav>
                 </div>

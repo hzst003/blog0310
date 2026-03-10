@@ -53,7 +53,7 @@ export default async function BlogPage({ searchParams }: PageProps) {
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-semibold tracking-tight">博客</h1>
           <p className="text-sm text-muted-foreground">
-            使用 MDX 写文章，自动生成博客列表。支持按关键字和标签搜索。
+            支持按关键字和标签搜索。
           </p>
         </div>
 

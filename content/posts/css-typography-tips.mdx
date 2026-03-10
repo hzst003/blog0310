@@ -1,0 +1,72 @@
+---
+title: "让博客文字更好读的几条 CSS 建议"
+date: "2026-03-11"
+description: "从行高、行宽到颜色，对博客阅读体验影响最大的一些排版细节。"
+tags:
+  - CSS
+  - 排版
+  - 前端
+---
+
+# 让博客文字更好读的几条 CSS 建议
+
+写技术博客，内容当然最重要，但排版也直接影响「读得下去」的感觉。
+
+这里记几条在博客项目里非常实用、成本又很低的 CSS 建议，你可以在全局样式里一次性配置好。
+
+## 1. 合理的行宽
+
+经验上，每行在 60～80 个字符是比较舒服的阅读范围，可以通过限制内容区域最大宽度实现：
+
+```css
+.prose {
+  max-width: 70ch; /* 约 70 个字符 */
+  margin-inline: auto;
+}
+```
+
+如果你在用 Tailwind，可以直接用 `prose` + `max-w-prose` 之类的工具类。
+
+## 2. 行高比你想象的要大
+
+代码里常见的 `line-height: 1.4` 对正文来说通常不够。正文文本推荐接近 `1.7` 或更高：
+
+```css
+.prose {
+  line-height: 1.7;
+}
+```
+
+标题可以相对紧一点，比如 `1.3 ~ 1.4`。
+
+## 3. 对比度和颜色
+
+纯黑色文字在白底上有时候会显得有点「扎眼」，可以适当降低一点明度：
+
+```css
+body {
+  color: #111827; /* 而不是 #000000 */
+  background: #f9fafb;
+}
+```
+
+同时注意链接颜色要足够显眼，并加上 `:hover` 状态。
+
+## 4. 适配代码块
+
+既然你已经有代码高亮，那么可以再给代码块一些额外的排版优化：
+
+```css
+pre {
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+```
+
+这些小改动叠加起来，就能让你的博客在保持简洁的同时，又有非常舒服的阅读体验。
+
