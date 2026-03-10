@@ -47,7 +47,7 @@ function FeatureCard({
       <Card data-slot="card" className={cardBaseClasses}>
         <CardHeader className="space-y-2 pb-2">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform duration-200 group-hover:scale-110 group-hover:bg-primary/15">
+            <div className="flex h-8 w-8 items-center justify-center text-primary transition-transform duration-200 group-hover:scale-110">
               {icon}
             </div>
             <CardTitle className="text-base font-semibold tracking-tight">
@@ -106,115 +106,74 @@ const featureCards: FeatureCardProps[] = [
     footerRight: "查看写作技巧",
   },
   {
-    href: "/blog?tag=MDX",
-    ariaLabel: "按 MDX 标签筛选文章",
-    icon: <Tag className="h-4 w-4" aria-hidden="true" />,
-    title: "按标签阅读",
-    description: (
-      <>
-        在文章 Frontmatter 中设置 <code>tags</code>，列表页即可筛选。
-      </>
-    ),
-    content: (
-      <pre className="rounded-md bg-muted px-3 py-2">
-        <code>{`tags:
-  - Next.js
-  - MDX`}</code>
-      </pre>
-    ),
-    footerLeft: "最多展示前两类标签",
-    footerRight: "按 MDX 标签浏览",
-  },
-  {
-    href: "/blog/code-highlighting",
-    ariaLabel: "查看 MDX 组件与代码高亮示例",
-    icon: <Sparkles className="h-4 w-4" aria-hidden="true" />,
-    title: "组件化 MDX",
-    description: (
-      <>
-        使用统一的 MDX 组件，比如 <code>&lt;Note /&gt;</code> 和{" "}
-        <code>&lt;Warning /&gt;</code>。
-      </>
-    ),
-    content: (
-      <>
-        <p>示例：</p>
-        <pre className="mt-2 rounded-md bg-muted px-3 py-2">
-          <code>{`<Note>这是一个提示。</Note>
-<Warning>这是一个警告。</Warning>`}</code>
-        </pre>
-      </>
-    ),
-    footerLeft: "定义于 components/mdx.tsx",
-    footerRight: "查看组件示例",
-  },
-  {
-    href: "/blog?tag=Next.js",
-    ariaLabel: "按 Next.js 标签筛选文章",
+    href: "https://edgeone.hzst.online/",
+    ariaLabel: " wasu",
     icon: (
       <Image
-        src="/icons/nextjs.png"
-        alt="Next.js 文章"
-        width={16}
-        height={16}
-        className="h-4 w-4"
+        src="/icons/logowasu01.png"
+        alt="qrcode"
+        width={30}
+        height={30}
+        className="h-[30px] w-[30px]"
       />
     ),
-    title: "Next.js 文章",
-    description: "聚焦 Next.js 相关实践与最佳实践。",
-    footerLeft: "标签：Next.js",
-    footerRight: "查看 Next.js 文章",
+    title: "华数相关",
+    description: "表格 工程信息 ",
+    footerLeft: " ",
+    footerRight: "进入 ",
   },
+
+
   {
-    href: "/blog?tag=MDX",
-    ariaLabel: "查看 MDX 写作与组件文章",
+    href: "/qrcode0210",
+    ariaLabel: " 个性二维码生成",
     icon: (
       <Image
-        src="/icons/mdx.png"
-        alt="MDX 写作"
-        width={16}
-        height={16}
-        className="h-4 w-4"
+        src="/icons/qrcode138259.png"
+        alt="qrcode"
+        width={30}
+        height={30}
+        className="h-[30px] w-[30px]"
       />
     ),
-    title: "MDX 写作",
-    description: "学习如何用 MDX 写出结构清晰的技术文章。",
-    footerLeft: "标签：MDX",
-    footerRight: "浏览 MDX 文章",
+    title: "个性二维码生成",
+    description: "自定义颜色背景大小中心图 ",
+    footerLeft: " ",
+    footerRight: "进入 ",
   },
   {
-    href: "/blog?tag=代码高亮",
+    href: "http://124.220.27.60:8502/",
     ariaLabel: "查看代码高亮相关文章",
     icon: (
       <Image
-        src="/icons/code.png"
-        alt="代码高亮"
-        width={16}
-        height={16}
-        className="h-4 w-4"
+        src="/icons/xlsxreport_82918.png"
+        alt="xlsx"
+        width={30}
+        height={30}
+        className="h-[30px] w-[30px]"
       />
     ),
-    title: "代码高亮",
-    description: "探索 Shiki、rehype-pretty-code 等高亮方案。",
-    footerLeft: "标签：代码高亮",
-    footerRight: "查看高亮文章",
+    title: "报表浏览",
+    description: "xlsx报表浏览",
+    footerLeft: "xlsx",
+    footerRight: "查看",
   },
   {
-    href: "/blog?tag=Dark%20Mode",
-    ariaLabel: "查看暗色模式与主题切换文章",
+    href: "http://124.220.27.60:8503/",
+    ariaLabel: "xlsx",
     icon: (
       <Image
-        src="/icons/dark-mode.png"
+        src="/icons/xlsx57489.png"
         alt="主题切换"
-        width={16}
-        height={16}
-        className="h-4 w-4"
+        width={30}
+        height={30}
+        className="h-[30px] w-[30px]"
       />
     ),
-    title: "主题与暗色模式",
-    description: "基于 next-themes 与 shadcn/ui 的主题切换实现。",
-    footerLeft: "标签：Dark Mode",
-    footerRight: "查看主题文章",
+    title: "xlsx工具箱",
+    description: "xlsx拆分、合并、分组、匹配",
+    footerLeft: "xlsx",
+    footerRight: "查看",
   },
 ]
 
